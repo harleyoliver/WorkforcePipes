@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{ae0856ef-f89b-4b86-a13a-23cfabe5ebb8}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{87b2c56b-d96a-4888-a912-09ea5fa57b5f}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{baba13bc-4a7b-4cdf-9832-549f26200cd3}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{bffbd36d-0b85-45a6-985a-0f46795a3d57}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="dev_fullname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="dev_fullname" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c612bd0d-2678-47b0-b8c7-e96914da8524}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{beddfc48-7ef1-4fb9-9306-c33ae616dbb1}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="dev_email" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="dev_email" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{dd46f36e-a0cd-4294-af6a-78d1f2d93499}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="dev_status" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="dev_status" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

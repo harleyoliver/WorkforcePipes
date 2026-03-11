@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{1b000c35-9961-4041-86c3-f58c675f8744}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="dev_certificationname" select="1" icon="1" preview="1">
+        <row name="result" id="dev_skillcertificationid">
+          <cell name="dev_certificationname" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="dev_skillcertification">
+          <attribute name="dev_skillcertificationid" />
+          <attribute name="dev_certificationname" />
+          <attribute name="createdon" />
+          <order attribute="dev_certificationname" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Inactive Skill Certifications" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{f5bbd741-437e-4e73-a0eb-c4016aa18f80}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{1c699ff3-2fb5-4b50-8580-50b80448920b}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{97086294-9f27-426d-9b09-b081cb0a8f70}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{75c0c6f4-4565-41ee-8be9-b75714031235}">
+                        <labels>
+                          <label description="Certification Name" languagecode="1033" />
+                        </labels>
+                        <control id="dev_certificationname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="dev_certificationname" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2fca8ba8-9cab-4c79-a276-9179f17ae726}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8212b0e6-3444-4f2a-8968-f04395eca447}">
+                        <labels>
+                          <label description="Expiry Date" languagecode="1033" />
+                        </labels>
+                        <control id="dev_expirydate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="dev_expirydate" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{51bf727c-4d9a-462d-9f53-26410e947d2c}">
+                        <labels>
+                          <label description="Credential ID" languagecode="1033" />
+                        </labels>
+                        <control id="dev_credentialid" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="dev_credentialid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3be6677f-e848-4cd6-8d48-accaaaec8abb}">
+                        <labels>
+                          <label description="Worker" languagecode="1033" />
+                        </labels>
+                        <control id="dev_worker" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="dev_worker" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

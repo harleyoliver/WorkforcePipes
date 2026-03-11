@@ -1,2 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="business_unit_dev_skillcertification" />
+  <EntityRelationship Name="business_unit_dev_worker" />
+  <EntityRelationship Name="dev_skillcertification_Worker_dev_worker" />
+  <EntityRelationship Name="lk_dev_skillcertification_createdby" />
+  <EntityRelationship Name="lk_dev_skillcertification_modifiedby" />
+  <EntityRelationship Name="lk_dev_worker_createdby" />
+  <EntityRelationship Name="lk_dev_worker_modifiedby" />
+  <EntityRelationship Name="owner_dev_skillcertification" />
+  <EntityRelationship Name="owner_dev_worker" />
+  <EntityRelationship Name="team_dev_skillcertification" />
+  <EntityRelationship Name="team_dev_worker" />
+  <EntityRelationship Name="user_dev_skillcertification" />
+  <EntityRelationship Name="user_dev_worker" />
+</EntityRelationships>
