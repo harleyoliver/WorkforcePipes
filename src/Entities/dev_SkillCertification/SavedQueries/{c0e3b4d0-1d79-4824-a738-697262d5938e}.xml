@@ -11,7 +11,6 @@
       <grid name="resultset" jump="dev_certificationname" select="1" icon="1" preview="1">
         <row name="result" id="dev_skillcertificationid">
           <cell name="dev_certificationname" width="300" />
-          <cell name="createdon" width="125" />
           <cell name="dev_expirydate" width="150" />
           <cell name="dev_credentialid" width="150" />
           <cell name="dev_worker" width="150" />

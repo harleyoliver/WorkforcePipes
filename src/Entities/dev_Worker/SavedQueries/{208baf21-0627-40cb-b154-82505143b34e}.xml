@@ -11,7 +11,6 @@
       <grid name="resultset" jump="dev_fullname" select="1" icon="1" preview="1">
         <row name="result" id="dev_workerid">
           <cell name="dev_fullname" width="300" />
-          <cell name="createdon" width="125" />
           <cell name="dev_email" width="150" />
           <cell name="dev_status" width="150" />
         </row>
