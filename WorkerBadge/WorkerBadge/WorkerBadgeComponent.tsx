@@ -7,7 +7,18 @@ export interface IWorkerBadgeProps {
     status: number;
     jobTitle?: string;
     department?: string;
+    onSelect: () => void;
+    isSelected: boolean;
 }
+
+const departmentThemes: Record<string, string> = {
+    "Engineering": "border-sky-500 bg-sky-50 text-sky-700",
+    "Sales": "border-emerald-500 bg-emerald-50 text-emerald-700",
+    "Marketing": "border-rose-500 bg-rose-50 text-rose-700",
+    "Executive": "border-violet-600 bg-violet-50 text-violet-800",
+    "Operations": "border-amber-500 bg-amber-50 text-amber-700",
+    "Default": "border-slate-200 bg-white text-slate-600"
+};
 
 export const WorkerBadgeComponent: React.FC<IWorkerBadgeProps> = (props) => {
     const { avatarUrl, name, status, jobTitle, department } = props;
@@ -19,28 +30,41 @@ export const WorkerBadgeComponent: React.FC<IWorkerBadgeProps> = (props) => {
         3: { label: "Offboarding", color: "bg-red-500" }
     }[status] ?? { label: "Unknown", color: "bg-slate-400" };
 
+    const currentTheme = departmentThemes[department ?? ""] || departmentThemes.Default;
+
     return (
-        <div className="flex items-center p-3 bg-white rounded-lg shadow-sm border border-slate-200 max-w-sm">
-            {/* Status Avatar Column */}
+        <div
+            onClick={props.onSelect}
+            className={`
+                flex items-center p-3 rounded-xl shadow-sm border-2 
+                transition-all duration-300 cursor-pointer
+                hover:shadow-md hover:scale-[1.02] active:scale-[0.98]
+                ${currentTheme} max-w-sm relative overflow-hidden
+                ${props.isSelected ? 'ring-4 ring-indigo-500 shadow-xl' : 'ring-0'}
+            `}>
+            {props.isSelected && (
+                <div className="absolute top-0 right-0 bg-indigo-500 text-white p-1 rounded-bl-lg">
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+                    </svg>
+                </div>
+            )}
             {/* Avatar Section */}
             <div className="relative flex-shrink-0">
                 <div className="w-12 h-12 rounded-full overflow-hidden border border-slate-200 bg-slate-50 flex items-center justify-center">
                     {props.avatarUrl ? (
-                        /* Show the User's Dataverse Photo */
                         <img 
                             src={props.avatarUrl} 
                             className="w-full h-full object-cover" 
                             alt={props.name} 
                         />
                     ) : (
-                        /* FALLBACK: Show the WorkforcePipes Logo icon */
                         <img 
                             src={props.logoUrl}
                             className="w-12 h-12 opacity-60" 
                             alt="WorkforcePipes Logo" 
                         />
-                    )
-                    }
+                    )}
                 </div>
                 
                 {/* Status Dot */}
@@ -64,15 +88,6 @@ export const WorkerBadgeComponent: React.FC<IWorkerBadgeProps> = (props) => {
                         {statusConfig.label}
                     </span>
                 </div>
-            </div>
-
-            {/* Company Logo */}
-            <div className="absolute top-2 right-2 w-6 h-auto opacity-30">
-                <img 
-                    src="assets/logo-icon.svg" 
-                    alt="WorkforcePipes Brand" 
-                    className="w-full h-auto"
-                />
             </div>
         </div>
     );

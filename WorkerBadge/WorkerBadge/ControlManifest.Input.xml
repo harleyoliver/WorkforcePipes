@@ -23,6 +23,7 @@
     <property name="status" display-name-key="Status" of-type="OptionSet" usage="bound" required="true" />
     <property name="jobTitle" display-name-key="Job Title" description-key="The worker's official title" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="department" display-name-key="Department" description-key="The worker's organizational unit" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="isSelected" display-name-key="Is Selected" description-key="True if this badge was clicked" of-type="TwoOptions" usage="output" />
     <!--
       Property node's of-type attribute can be of-type-group attribute.
       Example:
