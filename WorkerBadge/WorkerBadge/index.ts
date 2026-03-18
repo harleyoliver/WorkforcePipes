@@ -1,5 +1,6 @@
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 import * as React from "react";
+import * as ReactDOM from "react-dom";
 import { WorkerBadgeComponent, IWorkerBadgeProps } from "./WorkerBadgeComponent";
 
 export class WorkerBadge implements ComponentFramework.ReactControl<IInputs, IOutputs> {
@@ -15,12 +16,15 @@ export class WorkerBadge implements ComponentFramework.ReactControl<IInputs, IOu
     }
 
     public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
-        /* eslint-disable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access */
+        
         const props: IWorkerBadgeProps = {
             name: context.parameters.fullName.raw ?? "",
-            status: context.parameters.status.raw ?? 0
+            status: context.parameters.status.raw ?? 0,
+            jobTitle: context.parameters.jobTitle.raw ?? "",
+            department: context.parameters.department.raw ?? "",
+            avatarUrl: context.parameters.avatarImage.raw ?? undefined,
+            logoUrl: "assets/logo.svg"
         };
-        /* eslint-enable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access */
 
         return React.createElement(WorkerBadgeComponent, props);
     }
